@@ -306,7 +306,7 @@ void compileBasicType(void) {
       break;
       //TH loi xay ra:
     default:
-      error(ERR_INVALIDSTATEMENT, lookAhead->lineNo, lookAhead->colNo);
+      error(ERR_INVALIDBASICTYPE, lookAhead->lineNo, lookAhead->colNo);
       break;
     }
 }//slide 7
