@@ -560,32 +560,12 @@ void compileCondition2(void) {
   switch(lookAhead->tokenType){
 
   case SB_EQ:
-    eat(SB_EQ);
-    compileExpression();
-    break;
-
   case SB_NEQ:
-    eat(SB_NEQ);
-    compileExpression();
-    break;
-
   case SB_LE:
-    eat(SB_LE);
-    compileExpression();
-    break;
-
   case SB_LT:
-    eat(SB_LT);
-    compileExpression();
-    break;
-
   case SB_GE:
-    eat(SB_GE);
-    compileExpression();
-    break;
-
   case SB_GT:
-    eat(SB_GT);
+    eat(lookAhead->tokenType);
     compileExpression();
     break;
 
@@ -601,12 +581,8 @@ void compileExpression(void) {
   switch (lookAhead->tokenType)
   {
   case SB_PLUS:
-    eat(SB_PLUS);
-    compileExpression2();
-    break;
-
   case SB_MINUS:
-    eat(SB_MINUS);
+    eat(lookAhead->tokenType);
     compileExpression2();
     break;
 
