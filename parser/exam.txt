@@ -1,0 +1,11 @@
+1. Chạy với 1 ví dụ
+2. sửa code KPL để gây lỗi nào đó
+3. hỏi chi tiết một xử lý| yêu cầu code lại với thay đổi trong luật cú pháp
+
+
+Error examples:
+
+S:= A(.I.)N; 	(* Invalid symbol *)
+S:= A(.I.)+N; 	(* Invalid statement *)
+S:= 3*N+2I; 	(* Invaild term *)
+S := 10*N+; 	(* Invalid factor *)

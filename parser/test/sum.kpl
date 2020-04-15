@@ -1,0 +1,19 @@
+PROGRAM  TEST;
+VAR  A : ARRAY(. 5 .) OF INTEGER;
+     N : INTEGER;
+     I : INTEGER;
+     SUM : INTEGER;
+
+BEGIN
+      N := READI;
+      SUM := 0;
+
+      FOR I := 1 TO N DO
+        A(.I.) := READI;
+
+    FOR I := 1 TO N DO
+           SUM := SUM + A(.I.);
+
+    CALL WRITEI(SUM);
+    CALL WRITELN;
+END.
